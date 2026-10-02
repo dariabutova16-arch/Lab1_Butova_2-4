@@ -1,4 +1,7 @@
 ﻿using System.ComponentModel;
+using StudentCabinet.Models;
+
+namespace StudentCabinet.ViewModels;
 
 public class StudentViewModel : INotifyPropertyChanged
 {
