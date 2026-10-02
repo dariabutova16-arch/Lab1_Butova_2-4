@@ -1,4 +1,6 @@
-﻿public class Student
+﻿namespace StudentCabinet.Models;
+
+public class Student
 {
     public string FullName { get; set; }
     public string Group { get; set; }
