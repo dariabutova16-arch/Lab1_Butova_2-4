@@ -16,10 +16,11 @@ public class StudentViewModel : INotifyPropertyChanged
             {
                 _student.FullName = value;
                 OnPropertyChanged(nameof(FullName));
+                OnPropertyChanged(nameof(Greeting));
+                _addStudentCommand.ChangeCanExecute();   // ← цей рядок
             }
         }
     }
-
     public string Group
     {
         get => _student.Group;
