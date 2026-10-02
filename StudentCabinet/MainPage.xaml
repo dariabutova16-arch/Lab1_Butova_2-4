@@ -28,5 +28,24 @@
             </Label.Triggers>
         </Label>
 
+        <Button Text="Додати студента"
+                Command="{Binding AddStudentCommand}" />
+
+        <CollectionView ItemsSource="{Binding Students}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <VerticalStackLayout Padding="0,6">
+                        <Label Text="{Binding FullName}" FontAttributes="Bold" />
+                        <Label Text="{Binding Group, StringFormat='Група: {0}'}" />
+                        <Label Text="{Binding AverageScore, StringFormat='Бал: {0:F1}'}" />
+                    </VerticalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </VerticalStackLayout>
+</ContentPage>
+        </Label>
+
     </VerticalStackLayout>
 </ContentPage>
